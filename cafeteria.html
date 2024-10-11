@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeteria</title>
+    <style>
+        h1 {
+            font-size: 48px;
+            position: absolute;
+            top: 5px;
+            left: 100px;
+            font-weight: bold;
+            text-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.7), 
+                0 0 10px rgba(255, 255, 255, 0.7), 
+                0 0 20px rgb(27, 2, 2), 
+                0 0 30px rgba(27, 2, 2, 0.7);
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 
+                    0 0 5px rgba(27, 2, 2, 0.7),
+                    0 0 10px rgba(27, 2, 2, 0.5);
+            }
+            100% {
+                text-shadow: 
+                    0 0 10px rgb(87, 53, 53),
+                    0 0 20px rgba(87, 53, 53, 0.7),
+                    0 0 30px rgba(87, 53, 53, 0.7);
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/236x/61/6e/71/616e719b2c1fba06de0abb28cec2f914.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto; /* Alterado para auto */
+        }
+        .sidebar {
+            height: 100%;
+            width: 60px; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            margin: 20px 0;
+            color: white;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover img {
+            opacity: 0.7;
+        }
+
+        .sidebar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .content {
+            margin-left: 60px;
+            padding: 20px;
+        }
+
+        .coffee-display, .snack-display {
+            background-color: #2c1606; 
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%; 
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            text-align: center; 
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+        }
+
+        .coffee-item, .snack-item {
+            text-align: center;
+            width: 150px;
+        }
+
+        .coffee-item img, .snack-item img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s; 
+        }
+
+        .coffee-item img:hover, .snack-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .coffee-item p, .snack-item p {
+            margin-top: 10px;
+            color: white;
+            font-size: 16px;
+        }
+
+        .testimonials {
+            background-color: rgb(100, 82, 82);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" title="Cardápio">
+            <img src="https://i.pinimg.com/236x/05/4e/0a/054e0a19e41bbad44831fc3be885bf37.jpg" alt="Cardápio">
+        </a>
+        <a href="#" title="Localização">
+            <img src="https://i.pinimg.com/236x/bd/97/25/bd97253c5352f0299bfdd0b3248e808b.jpg" alt="Localização">
+        </a>
+        <a href="#" title="Contato">
+            <img src="https://i.pinimg.com/236x/15/ad/4f/15ad4f0118d10f9fd38fcfb48deb1c99.jpg" alt="Contato">
+        </a>
+        <a href="#" title="Perfil">
+            <img src="https://i.pinimg.com/control/236x/dd/ab/21/ddab219dc735273c94c913d568859e44.jpg" alt="Perfil">
+        </a>
+    </div>
+
+    <div class="content">
+        <h1>Cafeteria Bella's</h1>
+    </div>
+
+    <div class="coffee-display">
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/474x/a0/6c/07/a06c07e2e2164e5e92d24c413909a0da.jpg" alt="Café Expresso">
+            <p>Café Expresso</p>
+        </div>
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/control/236x/e0/4a/fb/e04afbbb95426d86cb34b31bcf9f1571.jpg" alt="Café Latte">
+            <p>Café Latte</p>
+        </div>
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/control/236x/5c/fd/93/5cfd93bf09153e97707fff073ccd309c.jpg" alt="Caramel Iced">
+            <p>Caramel Iced</p>
+        </div>
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/236x/20/aa/f2/20aaf2a699f23af1f072abebe06b3469.jpg" alt="Chocolate Quente">
+            <p>Chocolate Quente</p>
+        </div>
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/control/236x/22/8b/72/228b72a03cb98c19063193cf0188a6a3.jpg" alt="Café Mocha">
+            <p>Café Mocha</p>
+        </div>
+        <div class="coffee-item">
+            <img src="https://i.pinimg.com/236x/5c/7a/43/5c7a43138d9740941d0326a156551135.jpg" alt="Café Gelado">
+            <p>Café Gelado</p>
+        </div>
+    </div>
+
+    <div class="snack-display">
+        <div class="snack-item">
+            <img src="https://i.pinimg.com/236x/d7/40/41/d74041c4dcef25fc80ed42a10b3c11a1.jpg" alt="Bolo de Chocolate">
+            <p>Bolo de Chocolate</p>
+        </div>
+        <div class="snack-item">
+            <img src="https://i.pinimg.com/236x/c9/ca/a2/c9caa2b453305e0d0be411684b414b36.jpg" alt="Croissant">
+            <p>Croissant</p>
+        </div>
+        <div class="snack-item">
+            <img src="https://i.pinimg.com/474x/8e/18/e0/8e18e00b3c833c43353d77e60eba8ceb.jpg" alt="Torta de Frutas">
+            <p>Torta de Limão</p>
+        </div>
+        <div class="snack-item">
+            <img src="https://i.pinimg.com/control/236x/a2/54/ab/a254ab3176f62d952a39db1c7a2a6a2b.jpg" alt="Biscoitos">
+            <p>Cookies</p>
+        </div>
+        <div class="snack-item">
+            <img src="https://i.pinimg.com/236x/e5/cd/6b/e5cd6b0e847b606a583a3f4615644bc3.jpg" alt="Pão de Queijo">
+            <p>Pão de Queijo</p>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <h2>Avaliações dos Clientes</h2>
+        <p>"O melhor café que já experimentei! A atmosfera é incrível!" - Ana</p>
+        <p>"Adoro os doces! Sempre frescos e deliciosos." - João</p>
+        <p>"Um lugar perfeito para relaxar e trabalhar." - Maria</p>
+    </div>
+
+    </div>
+
+    <div class="content">
+        <h2>Redes Sociais</h2>
+        <a href="#" style="color: #ea00ff;">Instagram</a> | 
+        <a href="#" style="color: #0400ff;">Facebook</a> | 
+        <a href="#" style="color: #6d81f1;">Twitter</a>
+    </div>
+
+</body>
+</html>
